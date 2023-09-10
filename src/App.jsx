@@ -1,8 +1,12 @@
 import './App.css'
+import Reviews from './components/review/Reviews';
+
 
 function App() {
   return (
-    <div></div>
+    <div className="reviews">
+      <Reviews />
+    </div>
   )
 }
 
