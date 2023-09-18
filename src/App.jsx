@@ -1,12 +1,14 @@
 import './App.css'
-import Reviews from './components/review/Reviews';
+import Dashboard from './components/dashboard/Dashboard';
+import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
   return (
-    <div className="reviews">
-      <Reviews />
-    </div>
+    <Routes>
+    <Route path='/' element={<Dashboard />} />
+    <Route path='/dashboard' element={<Dashboard />} />
+    </Routes>
   )
 }
 
