@@ -1,0 +1,9 @@
+.reviews {
+    position: absolute;
+    bottom: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 210px; 
+}
