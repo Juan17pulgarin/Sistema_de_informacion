@@ -21,7 +21,7 @@
 }
 
 .tarjeta {
-  background-color: #39a5ee;
+  background-color: hsl(145, 91%, 56%);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
@@ -32,7 +32,7 @@
 
 .tarjeta:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 8px 16px rgba(0, 255, 0, 0.897);
+  box-shadow: 0px 8px 16px hwb(229 0% 0% / 0.897);
   font-size: 18px;
 }
 
@@ -51,5 +51,5 @@
   content: '';
   display: block;
   height: 3px;
-  background-color: #3498db;
+  background-color: #fcfcfc;
 }

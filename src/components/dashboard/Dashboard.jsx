@@ -1,12 +1,22 @@
 import Review from '../review/Reviews'
-import { Route, Routes } from 'react-router-dom'
+import Navbar from '../navbar/Navbar'
+import Carousels from '../carousel/Carousel'
 import './dashboard.css'
+
 
 function Dashboard() {
   return (
-    <div  className="reviews">
-      <Review />
-    </div>
+    <>
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <Carousels />
+      </div>
+      <div  className="reviews">
+        <Review />
+      </div>
+    </>
   );
 }
 
