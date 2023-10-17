@@ -6,7 +6,6 @@ function Navbar() {
   const [showCategories, setShowCategories] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
 
-  // Definir los tipos de basuras de reciclaje
   const tiposDeBasuraReciclaje = ['Papel', 'Plástico', 'Vidrio', 'Metal', 'Cartón', 'Electrónicos'];
 
   return (
@@ -74,7 +73,7 @@ function Navbar() {
           </div>
         </div>
         <div className="right-section">
-          <Link to="/login"> {/* Utiliza Link para navegar a '/login' */}
+          <Link to="/login"> {}
             <button className="login-button">Iniciar Sesión</button>
           </Link>
         </div>

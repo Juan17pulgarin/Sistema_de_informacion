@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './review.css'
+import usuario from '../../assets/img/usuario.png'
 
 function Reviews() {
   const [comentarios, setComentarios] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/transactions')
+    axios.get('http://localhost:3000/api/comentarios')
       .then((response) => {
         setComentarios(response.data);
       })
@@ -20,17 +21,21 @@ function Reviews() {
   }, []);
 
     return (
-    <div className="contenedor">
-      <h4 className="encabezado">Comentarios</h4>
+      <div className="contenedor">
+      <h4 className="encabezado">Reseñas</h4>
       <div className="tarjetas">
         {comentarios.map((comentario) => (
           <div key={comentario.id} className="tarjeta">
-            <p className="comentario">{comentario.comentario}</p>
-            <h6 className="calificacion">Calificación: {comentario.calificacion}</h6>
+            <img src={usuario} alt="user" className="user" />
+            <div className="contenido">
+              <p className="comentario">{comentario.comentario}</p>
+              <h6 className="calificacion">Calificación: {comentario.calificacion}</h6>
+            </div>
           </div>
         ))}
       </div>
     </div>
+    
     )
   }
   

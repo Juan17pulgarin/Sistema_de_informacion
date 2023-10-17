@@ -1,14 +1,14 @@
 .contenedor {
-  background-color: #f2f2f2; 
-  padding: 0px;
+  background-color: rgba(217, 217, 217);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .encabezado {
-  font-size: 24px;
-  color: #333;
+  font-size: 20px;
+  color: black;
   margin-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
+  text-align: left;
   letter-spacing: 2px;
   margin-top: 0;
 }
@@ -17,11 +17,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-auto-rows: minmax(100px, auto);
-  gap: 20px;
+  gap: 10px;
 }
 
 .tarjeta {
-  background-color: hsl(145, 91%, 56%);
+  display: flex; /* Cambia a display flex para una disposición de fila */
+  background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
@@ -52,4 +53,14 @@
   display: block;
   height: 3px;
   background-color: #fcfcfc;
+}
+
+.user {
+  max-width: 50px; 
+  height: 50px;
+  margin-right: 10px;
+}
+
+.texto {
+  flex-grow: 1; 
 }

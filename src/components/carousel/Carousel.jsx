@@ -1,12 +1,11 @@
-import './Carousel.css';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
-import papel from '../../assets/img/papel.jpeg'
-import plastico from '../../assets/img/plastico.png'
-import vidrio from '../../assets/img/vidrio.png'
-import metal from '../../assets/img/metal.png'
-import carton from '../../assets/img/carton.jpg'
-import electronicos from '../../assets/img/electronicos.png'
+import React, { useState } from 'react';
+import './Carousel.css'; // Mantén esta importación para tus estilos específicos
+import papel from '../../assets/img/papel.jpeg';
+import plastico from '../../assets/img/plastico.png';
+import vidrio from '../../assets/img/vidrio.png';
+import metal from '../../assets/img/metal.png';
+import carton from '../../assets/img/carton.jpg';
+import electronicos from '../../assets/img/electronicos.png';
 
 function Carousels() {
   const tiposDeBasura = [
@@ -42,19 +41,34 @@ function Carousels() {
     },
   ];
 
+  // Estado para el número de tarjetas visibles
+  const [numTarjetasVisibles, setNumTarjetasVisibles] = useState(3);
+
+  // Función para mostrar más tarjetas
+  const mostrarMasTarjetas = () => {
+    setNumTarjetasVisibles(numTarjetasVisibles + 3); // Puedes ajustar la cantidad de tarjetas a mostrar aquí
+  };
+
   return (
     <div className="carousel-container">
-      <Carousel showArrows={true} showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true}>
-        {tiposDeBasura.map((tipo, index) => (
-          <div className="carousel-item" key={index}>
+      <div className="cards-container">
+        {tiposDeBasura.slice(0, numTarjetasVisibles).map((tipo, index) => (
+          <div className="card" key={index}>
             <div className="imagen-container">
               <img src={tipo.imagenSrc} alt={tipo.nombre} />
             </div>
-            <h2>{tipo.nombre}</h2>
-            <p>{tipo.descripcion}</p>
+            <div className="text-container">
+              <h2>{tipo.nombre}</h2>
+              <p>{tipo.descripcion}</p>
+            </div>
           </div>
         ))}
-      </Carousel>
+      </div>
+      {numTarjetasVisibles < tiposDeBasura.length && (
+        <button className="mostrar-mas-button" onClick={mostrarMasTarjetas}>
+          Mostrar Más
+        </button>
+      )}
     </div>
   );
 }

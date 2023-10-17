@@ -1,0 +1,73 @@
+/* MainNavbar.css */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .top-navbar {
+    display: flex;
+    justify-content: space-between; /* Coloca los elementos en los extremos */
+    align-items: center;
+    padding: 10px;
+    background-color: #4caf50; /* Color del menú superior */
+    color: white; /* Color del texto */
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Espaciado entre el icono y el texto */
+  }
+  
+  .user-icon {
+    font-size: 20px; /* Tamaño del icono de usuario */
+  }
+  
+  .username {
+    font-weight: bold;
+    margin-left: 5px; /* Espaciado entre el icono y el texto */
+  }
+  
+  .main-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #4caf50;
+    padding: 10px;
+    color: white;
+    width: 200px;
+    height: 100vh;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  .vertical-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option {
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .option:hover {
+    background-color: #357a38;
+  }
+  

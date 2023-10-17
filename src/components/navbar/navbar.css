@@ -1,6 +1,6 @@
 
 .navbar {
-    background-color: #2ecc71;
+    background-color: rgba(35, 185, 22);
     color: #fff;
     font-size: 18px;
     position: fixed;
@@ -39,7 +39,7 @@
   
   .categories-dropdown,
   .reviews-dropdown {
-    background-color: #2ecc71;
+    background-color: rgba(35, 185, 22);
     color: #fff;
     position: absolute;
     top: calc(100% + 10px);

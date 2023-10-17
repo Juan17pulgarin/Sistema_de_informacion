@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [registro, setRegistro] = useState(false);
@@ -134,9 +135,12 @@ const Login = () => {
             onChange={handleChange}
             required
           />
-          <button type="submit">
-            {registro ? 'Registrarse' : 'Iniciar Sesión'}
-          </button>
+          {}
+          <Link to="/mainNavbar">{}
+            <button type="submit">
+                {registro ? 'Registrarse' : 'Iniciar Sesión'}
+            </button>
+          </Link>
         </form>
         {!registro && (
           <p onClick={handleToggleRegistro}>
