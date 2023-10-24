@@ -1,156 +1,39 @@
-import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import imagenizquierda from '../../assets/img/caneca.png'
+import imagenDerecha from '../../assets/img/basurero.png'
+import usuario from '../../assets/img/usuario.png'
 
 const Login = () => {
-  const [registro, setRegistro] = useState(false);
-  const [formData, setFormData] = useState({
-    usuario: '',
-    contraseña: '',
-    documento: '',
-    primerNombre: '',
-    segundoNombre: '',
-    primerApellido: '',
-    segundoApellido: '',
-    direccion: '',
-    correo: '',
-    telefono: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (registro) {
-      console.log('Datos de registro enviados:', formData);
-    } else {
-      console.log('Datos de inicio de sesión:', formData);
-    }
-  };
-
-  const handleToggleRegistro = () => {
-    setRegistro(!registro);
-  };
-
   return (
-    <div className="container_login">
-      <div className={`card ${registro ? 'registro' : ''}`}>
-        <h2>{registro ? 'Registro' : 'Inicio de Sesión'}</h2>
-        <form onSubmit={handleSubmit}>
-          {registro && (
-            <>
-              <div className="input-group">
-                <input
-                  type="text"
-                  name="documento"
-                  placeholder="Documento"
-                  value={formData.documento}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="text"
-                  name="primerNombre"
-                  placeholder="Primer Nombre"
-                  value={formData.primerNombre}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <input
-                  type="text"
-                  name="segundoNombre"
-                  placeholder="Segundo Nombre"
-                  value={formData.segundoNombre}
-                  onChange={handleChange}
-                />
-                <input
-                  type="text"
-                  name="primerApellido"
-                  placeholder="Primer Apellido"
-                  value={formData.primerApellido}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <input
-                  type="text"
-                  name="segundoApellido"
-                  placeholder="Segundo Apellido"
-                  value={formData.segundoApellido}
-                  onChange={handleChange}
-                />
-                <input
-                  type="text"
-                  name="direccion"
-                  placeholder="Dirección"
-                  value={formData.direccion}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <input
-                  type="email"
-                  name="correo"
-                  placeholder="Correo Electrónico"
-                  value={formData.correo}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="tel"
-                  name="telefono"
-                  placeholder="Teléfono"
-                  value={formData.telefono}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </>
-          )}
-          {!registro && (
-            <input
-              type="text"
-              name="usuario"
-              placeholder="Usuario"
-              value={formData.usuario}
-              onChange={handleChange}
-              required
-            />
-          )}
-          <input
-            type="password"
-            name="contraseña"
-            placeholder="Contraseña"
-            value={formData.contraseña}
-            onChange={handleChange}
-            required
-          />
-          {}
-          <Link to="/mainNavbar">{}
-            <button type="submit">
-                {registro ? 'Registrarse' : 'Iniciar Sesión'}
-            </button>
-          </Link>
-        </form>
-        {!registro && (
-          <p onClick={handleToggleRegistro}>
-            ¿No tienes una cuenta? Regístrate
-          </p>
-        )}
-        {registro && (
-          <button onClick={handleToggleRegistro}>Volver</button>
-        )}
+    <div>
+      <div className='card-contenedora-login'>
+        <div className="card-left">
+          <img className='user' src={usuario} alt="Imagen Izquierda" />
+          <h3>Inicio de sesión</h3>
+          <input className='campos' type="text" placeholder="Usuario" />
+          <input className='campos' type="password" placeholder="Contraseña" />
+          <button className='ok'>Ingresar</button>
+        </div>
+
+        <div className="card-right">
+          <img />
+          <h3>Registrarse</h3>
+          <input className='campos' type="text" placeholder="Nombre" />
+          <input className='campos' type="email" placeholder="Email" />
+          <input className='campos' type="text" placeholder="Dirección" />
+          <input className='campos' type="text" placeholder="Teléfono" />
+          <input className='campos' type="password" placeholder="Contraseña" />
+          <label htmlFor="accept-terms">Acepto los términos y condiciones</label>
+          <input type="checkbox" id="accept-terms" />
+          <div className='contenedor-botones'>
+            <button className="ok">Registrarse</button>
+            <button className="cancel">Cancelar</button>
+          </div>
+        </div>
       </div>
+      <img className="imagen-izquierda" src={imagenizquierda} alt="Imagen Izquierda" />
+      <div className='inferior'></div>
+      <img className="imagen-derecha" src={imagenDerecha} alt="Imagen Derecha" />
     </div>
   );
 };

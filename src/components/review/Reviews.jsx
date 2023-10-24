@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './review.css'
 import usuario from '../../assets/img/usuario.png'
+const apiUrl = import.meta.env.VITE_CONSULTAR_REVIEWS;
 
 function Reviews() {
   const [comentarios, setComentarios] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/comentarios')
+    axios.get(apiUrl)
       .then((response) => {
         setComentarios(response.data);
       })

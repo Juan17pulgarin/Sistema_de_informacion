@@ -1,6 +1,7 @@
 import Review from '../review/Reviews'
 import Navbar from '../navbar/Navbar'
 import Carousels from '../carousel/Carousel'
+import  Support  from '../support/Support'
 import './dashboard.css'
 
 
@@ -15,6 +16,9 @@ function Dashboard() {
       </div>
       <div  className="reviews">
         <Review />
+      </div>
+      <div  className="suport">
+        <Support />
       </div>
     </>
   );

@@ -1,68 +1,125 @@
-/* Estilos para el contenedor */
-.container_login {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #4caf50; 
-  }
+.card-contenedora-login{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #4caf50;
-  }
-  
-  .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    width: 400px;
-    text-align: center;
-  }
-  
-  .card h2 {
-    margin: 0;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #4caf50;
-  }
-  
-  .card input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .card button {
-    width: 85%;
-    background-color: #008000;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .card p {
-    margin-top: 10px;
-    cursor: pointer;
-    color: #4caf50;
-  }
-  
-  .card .registro {
-    display: none;
-  }
-  
+.user{
+  width: 100px;
+  height: 70px;
+}
+
+.campos{
+  margin-bottom: 10px;
+  background: white;
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid #3498db; 
+  padding: 10px;
+  font-size: 16px;
+  color: black; 
+  outline: none; 
+  transition: border-color 0.3s;
+}
+
+.campos:focus {
+  border-color: #ff5733; 
+}
+
+.ok{
+  background-color: rgba(35, 185, 22);
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.cancel{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 400px;
+  background-color: lightgray;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.card-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 400px;
+  background-color: lightgray;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.contenedor-botones{
+  display: flex;
+  flex-direction: row;
+}
+
+.inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(35, 185, 22);
+  padding: 10px;
+  height: 100px;
+  z-index: 1;
+}
+
+.imagen-izquierda {
+  position: absolute;
+  left: 0;
+  top: 50%; 
+  width: 150px;
+  height: 150px;
+  transform: translateY(40%); 
+  z-index: 2;
+}
+
+.imagen-derecha {
+  position: absolute;
+  right: 0;
+  top: 50%; 
+  width: 150px;
+  height: 150px;
+  transform: translateY(40%); 
+  z-index: 3;
+}
