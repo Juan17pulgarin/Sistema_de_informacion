@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Login.css';
+import { useState } from 'react';
+import '../login/login.css';
 
 const Login = () => {
   const [registro, setRegistro] = useState(false);
@@ -146,6 +146,7 @@ const Login = () => {
         {registro && (
           <button onClick={handleToggleRegistro}>Volver</button>
         )}
+        
       </div>
     </div>
   );
