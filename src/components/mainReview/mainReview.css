@@ -1,0 +1,142 @@
+
+
+/* Agrega estilos para el contenedor del formulario */
+.form-container {
+  width: 1073px;
+  height: 600px;
+  position: absolute;
+  position: absolute;
+  top: 90px;
+  left: 299px;
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  }
+  
+  /* Estilos para cada grupo de campos */
+  .form-group {
+    margin-bottom: 60px; /* Espaciado entre grupos de campos */
+  }
+
+
+  .form-gro{
+    position: absolute;
+    margin-bottom: 60px;
+    top: 420px;
+    left: 20px;
+  }
+  
+  /* Estilos para etiquetas de los campos */
+  label {
+    display: block; /* Hace que las etiquetas ocupen una línea completa */
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Estilos para los campos de entrada de texto y textarea */
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  textarea {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el botón de enviar */
+  button[type="submit"] {
+    background-color: #23B916; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #24b916be; /* Cambia el color de fondo al pasar el ratón */
+  }
+
+  .supp {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .opti {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.imagenq{
+  width:160px;
+  height:160px;
+}
+
+
+#fecha{
+  width: 280px;
+height: 20px;
+position: absolute;
+top: 30px;
+left: 139px;
+}
+
+#nombre {
+  width: 430px;
+  height: 20px;
+  position: absolute;
+  top: 106px;
+  left: 139px;
+}
+
+#correo{
+
+  width: 430px;
+  height: 20px;
+  position: absolute;
+  top: 185px;
+  left: 139px;
+}
+
+#calificacion{
+  width: 430px;
+  height: 23px;
+  position: absolute;
+  top: 262px;
+  left: 139px;
+}
+
+
+#comentario {
+  width: 910px;
+  height: 175px;
+  position: absolute;
+  top: -75px;
+  left: 120px;
+}
+
+
+button[type="submit"] {
+  height: 40px;
+  left: 920px;
+  position: relative;
+  top: 220px;
+  width: 145px;
+  font-size: 18px;
+  border-radius: 20px;
+  /* Los demás estilos para el botón (background, color, etc.) pueden permanecer iguales o personalizarlos según tus preferencias. */
+}

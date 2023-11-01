@@ -1,0 +1,103 @@
+
+.navbar {
+    background-color: rgba(35, 185, 22);
+    color: #fff;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-item {
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .menu-item:hover {
+    color: #ecf0f1;
+  }
+  
+  .categories-dropdown,
+  .reviews-dropdown {
+    background-color: rgba(35, 185, 22);
+    color: #fff;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    display: none;
+    padding: 10px;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .categories-dropdown ul,
+  .reviews-dropdown ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .categories-dropdown ul li,
+  .reviews-dropdown ul li {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .categories-dropdown ul li:hover,
+  .reviews-dropdown ul li:hover {
+    text-decoration: underline;
+  }
+  
+  .categories-dropdown ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .categories-dropdown ul li {
+    flex: 0 0 calc(33.33% - 10px);
+    margin-right: 10px;
+  }
+  
+  .login-button {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .menu-item:hover .categories-dropdown {
+    display: block;
+  }
+  
+  .menu-item:hover .reviews-dropdown {
+    display: block;
+  }
+  
