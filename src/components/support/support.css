@@ -1,0 +1,19 @@
+.support {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .support img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  
