@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  nucleoslab:
+    container_name: SI/front
+    build:
+      context: ./
+    ports:
+      - 3271:3271
