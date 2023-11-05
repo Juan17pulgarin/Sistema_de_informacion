@@ -1,4 +1,3 @@
-/* MainNavbar.css */
 .navbar-container {
     position: fixed;
     top: 0;
@@ -8,26 +7,26 @@
   
   .top-navbar {
     display: flex;
-    justify-content: space-between; /* Coloca los elementos en los extremos */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px;
-    background-color: #4caf50; /* Color del menú superior */
-    color: white; /* Color del texto */
+    background-color: #4caf50;
+    color: white;
   }
   
   .user-info {
     display: flex;
     align-items: center;
-    margin-right: 10px; /* Espaciado entre el icono y el texto */
+    margin-right: 10px; 
   }
   
   .user-icon {
-    font-size: 20px; /* Tamaño del icono de usuario */
+    font-size: 20px; 
   }
   
   .username {
     font-weight: bold;
-    margin-left: 5px; /* Espaciado entre el icono y el texto */
+    margin-left: 5px; 
   }
   
   .main-navbar {

@@ -1,0 +1,149 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+.support img {
+  max-width: 80px;
+  max-height: 80px;
+}
+  .icon-image {
+    max-width: 35%; 
+  }
+
+  .top-navbar {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background-color: #23B916;
+    color: white; 
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+  }
+  
+  .user-icon {
+    font-size: 30px; 
+  }
+  
+  .username {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 20px;
+    margin-left: 10px; 
+  }
+  
+  .main-navbar {
+    transform: translate(0%, -5%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #23B916;
+    padding: 10px;
+    color: white;
+    width: 200px;
+    height: 100vh;
+  }
+
+  .option {
+    cursor: pointer;
+    padding: 25px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+
+  .icon-ima{
+    max-width: 8%;
+  }
+
+
+  .user-in{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+.comm{
+  cursor: pointer;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(34%, 170%);
+}
+
+.cms{
+  width: 40em;
+  height: 3em;
+  color: #23B916;
+  border: 0.2em solid transparent;
+  
+}
+
+.form-container {
+  background-color: #f2f2f2; 
+  padding: 20px; 
+  border-radius: 5px; 
+}
+
+.form-group {
+  margin-bottom: 20px; 
+}
+
+label {
+  display: block; 
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #3498db; 
+  color: #fff; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #2186c3; 
+}
+
+.icon-text{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
