@@ -2,7 +2,6 @@ import imagenizquierda from '../../assets/img/caneca.png'
 import imagenDerecha from '../../assets/img/basurero.png'
 import usuario from '../../assets/img/usuario.png'
 import './login.css'
-
 const Login = () => {
   return (
     <div>
