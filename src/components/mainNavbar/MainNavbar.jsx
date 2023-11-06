@@ -28,16 +28,6 @@ const MainNavbar = () => {
             <Link className="icon-text" to="/reseña">Reseñas</Link>
           </div>
 
-            <div className="option">
-          <img src={backgro} alt="Consultas" className="icon-image" />
-          <Link className="icon-text" to="/DiscriPcion">Consultas</Link>
-        </div>
-
-        <div className="option">
-          <img src={back} alt="Localización" className="icon-image" />
-        <Link className="icon-text" to="/localizacion">Localización</Link>
-        </div>
-
         <div className="option">
           <img src={recoge} alt="Recoger" className="icon-image" />
         <Link className="icon-text" to="/recoger">Recoger</Link>

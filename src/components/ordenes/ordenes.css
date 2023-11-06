@@ -1,0 +1,85 @@
+.contenedor-ordenes {
+  width: 80%;
+  max-width: 1085px;
+  height: 500px;
+  position: relative;
+  margin: 80px auto 0;
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  margin-left: calc((100% - 885px) / 2);
+}
+
+.formulario {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.campos label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  width: 70%;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 20%;
+  margin-top: -10%;
+}
+
+.logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.contenedor-botones{
+  display: flex;
+  flex-direction: row;
+}
+
+.guardar{
+  background-color: #23B916;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto;
+  margin-left: 67%;
+  
+}
+
+.limpiar {
+  background-color: #FF0303;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto;
+  margin-left: 1%;
+}
+
+.guardar:hover {
+  background-color: #27ae60;
+}
+
+.limpiar:hover {
+  background-color: #e74c3c;
+}
