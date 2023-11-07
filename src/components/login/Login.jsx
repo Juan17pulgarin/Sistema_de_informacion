@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import './login.css';
 const apiUrl = import.meta.env.VITE_COMPROBAR_USER;
+const apiRegistro= import.meta.env.VITE_REGISTRAR_USER;
 
 const Login = () => {
   const MySwal = withReactContent(Swal);
@@ -15,8 +16,13 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
+  const [registroNombre, setRegistroNombre] = useState('');
+  const [registroEmail, setRegistroEmail] = useState('');
+  const [registroDireccion, setRegistroDireccion] = useState('');
+  const [registroTelefono, setRegistroTelefono] = useState('');
+  const [registroContrasena, setRegistroContrasena] = useState('');
+
   const handleLogin = () => {
-    
     axios.post(apiUrl, { username, password }).then((response) => {
       if (response.status >= 200 && response.status < 300) {
         Swal.fire({
@@ -36,6 +42,39 @@ const Login = () => {
   };
 
   const handleRegister = () => {
+    const data = {
+      nombre: registroNombre,
+      contrasenna: registroContrasena,
+    };
+
+    axios.post(apiRegistro, data).then((response) => {
+      if (response.status >= 200 && response.status < 300) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Éxito',
+          text: '¡Registro exitoso!',
+        }).then(() => {
+          setRegistroNombre('');
+          setRegistroEmail('');
+          setRegistroDireccion('');
+          setRegistroTelefono('');
+          setRegistroContrasena('');
+        });
+      } else {
+        Swal.fire("Error en el registro");
+      }
+    })
+    .catch((error) => {
+      Swal.fire("Error en el registro", error.response.data.message, "error");
+    });
+  };
+
+  const handleCancel = () => {
+    setRegistroNombre('');
+    setRegistroEmail('');
+    setRegistroDireccion('');
+    setRegistroTelefono('');
+    setRegistroContrasena('');
   };
 
   return (
@@ -70,26 +109,36 @@ const Login = () => {
             className='campos'
             type="text"
             placeholder="Nombre"
+            value={registroNombre}
+            onChange={(e) => setRegistroNombre(e.target.value)}
           />
           <input
             className='campos'
             type="email"
             placeholder="Email"
+            value={registroEmail}
+            onChange={(e) => setRegistroEmail(e.target.value)}
           />
           <input
             className='campos'
             type="text"
             placeholder="Dirección"
+            value={registroDireccion}
+            onChange={(e) => setRegistroDireccion(e.target.value)}
           />
           <input
             className='campos'
             type="text"
             placeholder="Teléfono"
+            value={registroTelefono}
+            onChange={(e) => setRegistroTelefono(e.target.value)}
           />
           <input
             className='campos'
             type="password"
             placeholder="Contraseña"
+            value={registroContrasena}
+            onChange={(e) => setRegistroContrasena(e.target.value)}
           />
           <div className='terminos-condiciones'>
             <label htmlFor="accept-terms">Acepto los términos y condiciones<input type="checkbox" id="accept-terms" /></label>
@@ -98,7 +147,9 @@ const Login = () => {
             <button className="ok" onClick={handleRegister}>
               Registrarse
             </button>
-            <button className="cancel">Cancelar</button>
+            <button className="cancel" onClick={handleCancel}>
+              Limpiar
+            </button>
           </div>
         </div>
       </div>
