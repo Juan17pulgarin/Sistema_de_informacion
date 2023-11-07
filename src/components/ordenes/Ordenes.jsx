@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import Axios from 'axios';
+import Swal from 'sweetalert2';
 import './ordenes.css';
-import logo from '../../assets/img/logo.png';
 import MainNavbar from '../mainNavbar/MainNavbar';
+
+const apiUrl = import.meta.env.VITE_ORDENES;
 
 const Ordenes = () => {
   const [nombre, setNombre] = useState('');
@@ -23,21 +26,38 @@ const Ordenes = () => {
   };
 
   const guardarOrden = () => {
-    console.log('Nombre:', nombre);
-    console.log('Apellidos:', apellidos);
-    console.log('Tipo de Documento:', tipoDocumento);
-    console.log('Número de Documento:', numeroDocumento);
-    console.log('Dirección:', direccion);
-    console.log('Descripción del Producto:', descripcionProducto);
-    console.log('Fecha:', fecha);
+    const nuevaOrden = {
+      fecha: fecha,
+      descripcion: descripcionProducto,
+      direccion: direccion 
+    };
+
+    Axios.post(apiUrl, nuevaOrden)
+      .then((response) => {
+        if (response.data && response.data.mensaje) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: response.data.mensaje,
+          });
+        }
+      })
+      .catch((error) => {
+        console.error('Error al guardar la orden:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'No se pudo guardar la orden. Por favor, inténtalo de nuevo.',
+        });
+      });
   };
 
   return (
     <>   
       <MainNavbar />
-        <div className="contenedor-ordenes">
+      <div className="contenedor-ordenes">
         <div className="formulario">
-            <div className="campo">
+          <div className="campo">
             <label>Nombre:</label>
             <input
                 type="text"
@@ -45,8 +65,8 @@ const Ordenes = () => {
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
             />
-            </div>
-            <div className="campo">
+          </div>
+          <div className="campo">
             <label>Apellidos:</label>
             <input
                 type="text"
@@ -54,26 +74,26 @@ const Ordenes = () => {
                 value={apellidos}
                 onChange={(e) => setApellidos(e.target.value)}
             />
-            </div>
-            <div className="campo">
-            <label>Tipo de Documento:</label>
+          </div>
+          <div className="campo">
+            <label>Tipo Documento:</label>
             <input
                 type="text"
                 placeholder="Tipo de Documento"
                 value={tipoDocumento}
                 onChange={(e) => setTipoDocumento(e.target.value)}
             />
-            </div>
-            <div className="campo">
-            <label>Número de Documento:</label>
+          </div>
+          <div className = "campo">
+            <label>Número Documento:</label>
             <input
                 type="text"
                 placeholder="Número de Documento"
                 value={numeroDocumento}
                 onChange={(e) => setNumeroDocumento(e.target.value)}
             />
-            </div>
-            <div className="campo">
+          </div>
+          <div className="campo">
             <label>Dirección:</label>
             <input
                 type="text"
@@ -81,17 +101,17 @@ const Ordenes = () => {
                 value={direccion}
                 onChange={(e) => setDireccion(e.target.value)}
             />
-            </div>
-            <div className="campo">
-            <label>Descripción del Producto:</label>
+          </div>
+          <div className="campo">
+            <label>Descripción:</label>
             <input
                 type="text"
                 placeholder="Descripción del Producto"
                 value={descripcionProducto}
                 onChange={(e) => setDescripcionProducto(e.target.value)}
             />
-            </div>
-            <div className="campo">
+          </div>
+          <div className="campo">
             <label>Fecha:</label>
             <input
                 type="date"
@@ -99,16 +119,18 @@ const Ordenes = () => {
                 value={fecha}
                 onChange={(e) => setFecha(e.target.value)}
             />
-            </div>
-            <div className="contenedor-botones">
-                <button  className="guardar" onClick={guardarOrden}>Guardar</button>
-                <button   className="limpiar" onClick={limpiarCampos}>Limpiar</button>
-            </div>      
+          </div>
+          <div className="contenedor-botones">
+            <button className="guardar" onClick={guardarOrden}>
+              Guardar
+            </button>
+            <button className="limpiar" onClick={limpiarCampos}>
+              Limpiar
+            </button>
+          </div>
         </div>
-        </div>
-
+      </div>
     </>
-
   );
 };
 
