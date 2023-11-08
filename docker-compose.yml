@@ -6,4 +6,4 @@ services:
     build:
       context: ./
     ports:
-      - 3271:3271
+      - 3277:3277
