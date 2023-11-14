@@ -1,8 +1,6 @@
 import React from 'react';
 import './mainNavbar.css';
 import background from '../../assets/img/comentarios_1.png';
-import backgro from '../../assets/img/lupa_1.png';
-import back from '../../assets/img/mapa_1.png';
 import configu from '../../assets/img/configuraciones_1.png';
 import recoge from '../../assets/img/maps_and_location_1.png';
 import usua from '../../assets/img/usuario.png';
