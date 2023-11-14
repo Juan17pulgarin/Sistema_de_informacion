@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
   nucleoslab:
-    container_name: SI/front
+    container_name: ecovida-frontend
     build:
       context: ./
     ports:
-      - 3271:3271
+      - 3277:3277
