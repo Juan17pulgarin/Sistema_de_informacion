@@ -1,4 +1,4 @@
-import './Carousel.css'; 
+import './carousel.css'; 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 const apiUrl = import.meta.env.VITE_CONSULTAR_CARDS;
