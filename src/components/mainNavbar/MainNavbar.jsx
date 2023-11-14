@@ -4,7 +4,7 @@ import configu from '../../assets/img/configuraciones_1.png';
 import recoge from '../../assets/img/maps_and_location_1.png';
 import usua from '../../assets/img/usuario.png';
 import { Link } from 'react-router-dom';
-import './mainNavbar.css';
+
 
 const MainNavbar = () => {
   return (
